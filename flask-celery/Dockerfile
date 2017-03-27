@@ -14,7 +14,8 @@ COPY . /flask-celery
 WORKDIR /flask-celery
 
 # install requirements
-RUN pip install -r requirements.txt
+RUN pip install pytz==2015.7 \
+    && pip install -r requirements.txt
 
 
 # run the worker
